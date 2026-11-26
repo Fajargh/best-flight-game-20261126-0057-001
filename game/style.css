@@ -1,0 +1,23 @@
+/* Skyline Runner — page chrome only; the game itself is drawn on canvas. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; background: #0b1626; overflow: hidden; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  color: #eaf4ff;
+}
+#wrap {
+  position: fixed; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(120% 100% at 50% 0%, #16283f 0%, #0b1626 70%);
+}
+#game {
+  display: block;
+  width: min(100vw, calc(100vh * 1.6));
+  height: min(100vh, calc(100vw / 1.6));
+  background: #79a6d2;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+  cursor: crosshair;
+  /* crisp scaling for the canvas game */
+  image-rendering: auto;
+}
+#overlay { display: none; }
